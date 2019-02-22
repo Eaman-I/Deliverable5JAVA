@@ -1,0 +1,77 @@
+<!--
+Author: Eaman Iranmanesh
+Date: 02/19/2019
+Description: This assignment is to showcase HTML and JAVA capability. The program will collect and validate user info.
+-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" href="cssD5.css">
+<title>
+	Customer Information
+</title>
+<script>
+
+
+	// Input validation for all fields
+	function validateForm() 
+{
+	// Validates First Name
+	var first = document.forms["customerInfo"]["firstname"].value;
+	if (first == "") 
+
+	{
+	alert("Please fill out all fields...");
+	return false;
+	}
+	
+	// Validates Last Name
+	var last = document.forms["customerInfo"]["lastname"].value;
+	if (last == "") 
+
+	{
+	alert("Please fill out all fields...");
+	return false;
+	}
+	
+	// Validated Email
+	var email = document.forms["customerInfo"]["email"].value;
+	if (email == "") 
+
+	{
+	alert("Please fill out all fields...");
+	return false;
+  	}
+}
+
+
+</script>
+</head>
+
+<body>
+
+<h1>
+	Customer Information
+</h1>
+
+
+<form name = "customerInfo" onsubmit = "return validateForm()" method = "post" >
+
+	
+
+	-Please Enter The Following- <br><br><br>
+	First Name: <br>
+	<input type="text" name="firstname"><br><br>
+	Last Name: <br>
+	<input type="text" name="lastname"><br><br>
+	Email: <br>
+	<input type="text" name="email"><br><br><br>
+	-Click Submit When Complete- <br><br>
+	<input type="submit" value="Submit"> 
+
+</form>
+
+</body> 
+</html>
